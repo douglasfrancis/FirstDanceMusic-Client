@@ -1,0 +1,49 @@
+@import "../../style/mixins.scss";
+
+.profile {
+    min-height: 200px ;
+    
+    @include profile();
+    
+    margin: 1.5rem 0;
+
+    .profile-info{
+        
+        float: left;
+        height: 100%;
+    }
+    .name {
+        margin-bottom: 1rem;
+        display: flex;
+    }
+    .service, .link, .price, .location {
+        margin-bottom: 0.5rem;
+        display: flex;
+    }
+
+    .btn-edit,
+    .btn-delete {
+        //button styling
+        @include btn();
+display: inline;
+        margin-right: 1rem;
+    }
+
+    .btn-edit{
+        background-color: var(--primary-colour);
+        color: var(--light-colour);
+    }
+
+    .btn-delete{
+        background-color: var(--danger-colour);
+        color: var(--light-colour);
+    }
+
+    .profile-video {
+       
+        float: right;
+        height: 100%;
+        display: flex;
+  
+    }
+}

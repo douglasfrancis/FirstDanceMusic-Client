@@ -1,0 +1,41 @@
+@import "../../style/mixins.scss";
+
+.home{
+    .add-service-btn{
+        @include btn();
+        background-color: var(--light-colour);
+    }
+
+    .no-services{
+        color: var(--light-colour);
+        margin-top: 2rem;
+        font-weight: bold;
+    }
+
+    .no-user-msg {
+
+       margin-top: 6rem;
+        color: var(--light-colour);
+        text-align: center;
+
+        h2{
+            font-size: 2rem;
+        }
+
+        a{
+            @include btn();
+            color: var(--primary-colour);
+            margin-top: 2rem;
+            font-weight: bold;
+            background: var(--light-colour);
+            display: inline-block;
+            padding: 0.5rem;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: unset;
+            }
+        }
+    }
+
+}

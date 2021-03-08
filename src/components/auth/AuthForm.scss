@@ -1,0 +1,25 @@
+@import "../../style/mixins.scss";
+
+.auth-form {
+    @include profile();
+
+    a{
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: var(--primary-colour);
+    }
+
+    h2{
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .btn-submit {
+        
+        @include btn();
+        background: var(--primary-colour);
+        color: var(--light-colour);
+        margin-bottom: 1rem;
+    }
+
+}

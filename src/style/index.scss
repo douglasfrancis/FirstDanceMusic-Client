@@ -1,0 +1,44 @@
+@import "./variables.scss";
+@import "./forms.scss";
+
+//resets
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: unset;
+    background: unset;
+    font: unset;
+    color:  unset;
+    cursor: pointer;
+    
+}
+
+a {
+    color: unset;
+    text-decoration: unset;
+}
+
+input {
+    color: unset;
+    background-color: unset;
+    font: unset;
+    border: unset;
+}
+//main styles
+
+body {
+    background: var(--primary-colour);
+    color: var(--text-dark-colour);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}

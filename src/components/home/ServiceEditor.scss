@@ -1,0 +1,31 @@
+@import "../../style/mixins.scss";
+
+.service-editor {
+
+
+    @include profile();
+    
+
+    .btn-save,
+    .btn-cancel {
+        @include btn();
+        margin-right: 1rem;
+    }
+
+    .btn-save {
+        background: var(--primary-colour);
+        color: var(--light-colour);
+    }
+
+    .btn-cancel {
+        background: var(--danger-colour);
+        color: var(--light-colour);
+    }
+
+    select {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+}
