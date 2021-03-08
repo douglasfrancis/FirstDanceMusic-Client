@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import UserContext from '../../context/UserContext';
 import domain from '../../util/domain';
 import "./Navbar.scss";
+import logo from "../../images/fdm-white.png";
 
 export default function Navbar() {
 
@@ -19,7 +20,7 @@ export default function Navbar() {
         <div className="navbar">
 
             <Link to="/">
-            <h1>First Dance Music</h1>
+            <img className="header-logo" src={logo}/>
             </Link>
         {user === null ? (
             <><Link to="/login">
