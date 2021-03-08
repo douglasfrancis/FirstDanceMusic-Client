@@ -2,6 +2,7 @@ import Axios from 'axios';
 import React, { useContext, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import UserContext from '../../context/UserContext';
+import domain from '../../util/domain';
 import ErrorMsg from '../misc/ErrorMsg';
 import "./AuthForm.scss";
 
@@ -24,7 +25,7 @@ export default function Login() {
             password: formPassword
         }
         try{
-            await Axios.post("http://localhost:5000/auth/login", loginData);
+            await Axios.post(`${domain}/auth/login`, loginData);
         } catch (err) {
             if(err.response) {
                 if(err.response.data.msg){

@@ -5,6 +5,7 @@ import ServiceEditor from './ServiceEditor';
 import "./Home.scss";
 import UserContext from '../../context/UserContext';
 import { Link } from 'react-router-dom';
+import domain from '../../util/domain';
 
 export default function Home() {
 
@@ -21,7 +22,7 @@ export default function Home() {
     }, [user]);
 
     async function getProfiles() {
-        const profilesRes = await Axios.get("http://localhost:5000/service/");
+        const profilesRes = await Axios.get(`${domain}/service/`);
         setProfiles(profilesRes.data);
     };
 

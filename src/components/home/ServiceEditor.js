@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import "./ServiceEditor.scss";
 import ErrorMsg from '../misc/ErrorMsg';
+import domain from '../../util/domain';
 
 export default function ServiceEditor({ getProfiles, setProfileEditorOpen, editServiceData, clearEditServiceData }) {
     const [editorName, setEditorName] = useState("");
@@ -34,9 +35,9 @@ export default function ServiceEditor({ getProfiles, setProfileEditorOpen, editS
 
         try{
         if(!editServiceData)
-            await Axios.post("http://localhost:5000/service/", serviceData);
+            await Axios.post(`${domain}/service/`, serviceData);
         else
-            await Axios.put(`http://localhost:5000/service/${editServiceData._id}`, serviceData);
+            await Axios.put(`${domain}/service/${editServiceData._id}`, serviceData);
         } catch (err) {
             if(err.response) {
                 if(err.response.data.msg){

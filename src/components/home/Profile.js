@@ -1,5 +1,6 @@
 import Axios from 'axios';
 import React from 'react';
+import domain from '../../util/domain';
 import "./Profile.scss";
 
 export default function Profile({profile, getProfiles, editService}) {
@@ -8,7 +9,7 @@ export default function Profile({profile, getProfiles, editService}) {
 
     if(window.confirm("Are you sure you want to delete?")){
 
-    await Axios.delete(`http://localhost:5000/service/${profile._id}`);
+    await Axios.delete(`${domain}/service/${profile._id}`);
 
     getProfiles();
    }

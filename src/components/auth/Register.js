@@ -2,6 +2,7 @@ import Axios from 'axios';
 import React, { useContext, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import UserContext from '../../context/UserContext';
+import domain from '../../util/domain';
 import ErrorMsg from '../misc/ErrorMsg';
 import "./AuthForm.scss";
 
@@ -25,7 +26,7 @@ export default function Register() {
             passwordVerify: formPasswordVerify
         }
         try{
-        await Axios.post("http://localhost:5000/auth/", registerData);
+        await Axios.post(`${domain}/auth/`, registerData);
         } catch (err) {
             if(err.response) {
                 if(err.response.data.msg){
