@@ -13,7 +13,7 @@
     input {
         width: 100%;
         margin-bottom: 1rem;
-        background: #ebe8e8;
+        background: var(--input-colour);
         padding: 0.3rem 0.5rem;
         border-radius: 5px;
     }

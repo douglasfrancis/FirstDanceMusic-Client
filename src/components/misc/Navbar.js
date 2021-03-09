@@ -19,8 +19,8 @@ export default function Navbar() {
     return (
         <div className="navbar">
 
-            <Link to="/">
-            <img className="header-logo" src={logo}/>
+            <Link to="/search">
+            <img className="header-logo" src={logo} alt="First Dance Music Logo"/>
             </Link>
         {user === null ? (
             <><Link to="/login">
@@ -31,7 +31,14 @@ export default function Navbar() {
             <p>Register</p>
             </Link>
             </>
-        ) :( user && <button onClick={logout} className='btn-logout'>Log Out</button>)}
+        ) :( user && 
+            <>
+            <Link to="/">
+            <p>Services</p>
+            </Link>
+        <button onClick={logout} className='btn-logout'>Log Out</button>
+            </>
+            )}
             
 
             
