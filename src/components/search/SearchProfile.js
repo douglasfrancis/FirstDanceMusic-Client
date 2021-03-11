@@ -1,6 +1,7 @@
 import Axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import domain from '../../util/domain';
+import Favourite from './Favourite';
 import "./SearchProfile.scss";
 
 export default function SearchProfile({profile}) {
@@ -45,16 +46,13 @@ export default function SearchProfile({profile}) {
             <div className="profile-info">
                 
             {profile.name && <h2 className="name">{profile.name}</h2>}
+
+            <Favourite profile={profile}/>
         
             <button className="btn-quote" onClick={()=> setQuoteOpen(true)} >Instant Quote</button>
             
             </div>
-            
-            
 
-            
-
-            
         </div>
     )
 }

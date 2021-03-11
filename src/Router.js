@@ -4,6 +4,7 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Home from './components/home/Home';
 import Search from './components/search/Search';
+import FilteredFavourites from './components/search/FilteredFavourites';
 import Navbar from './components/misc/Navbar';
 
 export default function Router() {
@@ -22,6 +23,10 @@ export default function Router() {
         <Route path="/search">
             <Search />
         </Route>
+        <Route path="/favourites">
+            <FilteredFavourites />
+        </Route>
+        
     </Switch>
     
     </BrowserRouter>

@@ -1,0 +1,28 @@
+@import "../../style/mixins.scss";
+
+.like-btn{
+    text-align: center;
+    
+        .unlike{
+            filter: grayscale(70%) brightness(2.2);
+            width: 7%;
+        cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        .like{
+            filter: grayscale(0%) brightness(1);
+            width: 7%;
+            cursor: pointer;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        
+       
+      
+    
+}

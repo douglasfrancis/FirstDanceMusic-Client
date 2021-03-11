@@ -1,18 +1,36 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import Axios from 'axios';
 import SearchProfile from './SearchProfile';
-import { Link } from 'react-router-dom';
 import domain from '../../util/domain';
+import Filter from './Filter';
+import { useLocation } from 'react-router-dom';
+import "./SearchProfile.scss";
 
 export default function Search() {
-
     const [profiles, setProfiles] = useState([]);
 
-    
+    let query = new URLSearchParams(useLocation().search);
+    let location = query.get('location');
+    let service = query.get('service');
+
     useEffect(() => {
-       
+       if(location || service) {
+        getFilteredProfiles();
+       } else {
         getProfiles();
-    }, []);
+       }
+        
+    }, [location, service]);
+
+    async function getFilteredProfiles() {
+
+        const payload = {
+            location: location,
+            service: service
+        }
+        const profilesRes = await Axios.post(`${domain}/search/filter`, payload);
+        setProfiles(profilesRes.data);
+    };
 
     async function getProfiles() {
         const profilesRes = await Axios.get(`${domain}/search/`);
@@ -31,8 +49,11 @@ export default function Search() {
    
 
     return (
+        <>
+        <Filter />
         <div className="search">
-            <h2>Find Musicians</h2>
+           
+            
             
             {profiles.length > 0 ? (
                 renderProfiles()
@@ -41,5 +62,8 @@ export default function Search() {
                 ) }
             
         </div>
+
+        </>
+        
     )
 }

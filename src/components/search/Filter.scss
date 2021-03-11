@@ -1,0 +1,37 @@
+@import "../../style/mixins.scss";
+
+.filter {
+    width: 100vw;
+    background-color: var(--light-colour);
+    position: absolute;
+    left: 0;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+
+    form{
+        display: inline;
+        float: right;
+    }
+
+    button, a{
+        @include btn();
+        background: var(--primary-colour);
+        color: var(--light-colour);
+        margin: 0.5rem;
+    }
+
+    a{
+        float: left;
+        display: inline;
+    }
+
+    label, select{
+        padding: 0.5rem;
+    }
+    select{
+        border-radius: 5px;
+        margin-right: 1rem;
+        width: 150px;
+        
+    }
+}
