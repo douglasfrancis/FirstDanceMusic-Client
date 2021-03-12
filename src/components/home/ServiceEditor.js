@@ -89,9 +89,11 @@ export default function ServiceEditor({ getProfiles, setProfileEditorOpen, editS
             <select id="service" name="service" value={editorService} onChange={(e)=>{setEditorService(e.target.value)}}>
                 <option >--select--</option>
                 <option value="Aisle Walk">Aisle Walk</option>
-                <option value="First Dance">First Dance</option>
                 <option value="Band">Band</option>
                 <option value="DJ">DJ</option>
+                <option value="Drinks Reception">Drinks Reception</option>
+                <option value="First Dance">First Dance</option>
+                <option value="Instrumental">Instrumental</option>
             </select>
 
             <label htmlFor="price">Price per 45 min set/fixed price for Aisle Walk or First Dance</label>

@@ -16,7 +16,7 @@ export default function FilteredFavourites() {
 
   async function getFavourites() {
       var arr = [];
-      var profileArr = [];
+      
       
         for(var i=0; i < localStorage.length; i++) {
           var key = localStorage.key(i);
@@ -27,16 +27,15 @@ export default function FilteredFavourites() {
           setUsers(arr);
       };
 
-      for(var i=0; i < users.length; i++) {
-        await axios.get(`${domain}/search/${users[i]}`)
-        .then(res => {
-          const users = res.data;
-          profileArr.push( users );
-          return profileArr
-      })
-    }
-    
-  setProfiles(profileArr)
+      let profiles = [];
+      for (i = 0; i < users.length; i++) {
+        profiles.push(axios.get(`${domain}/search/${users[i]}`))
+      }
+      
+      Promise.all(profiles)
+        .then(responses => console.log(responses));
+
+
 };
 
   return (

@@ -2,6 +2,13 @@
 
 .search {
     margin-top: 4rem;
+    text-align: center;
+
+    .no-services{
+        color: var(--light-colour);
+        text-align: center;
+        padding-top: 4rem;
+    }
 }
 .search-profile {
     width: 30% ;
