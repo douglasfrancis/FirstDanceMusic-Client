@@ -13,8 +13,8 @@ export default function Search() {
         getProfiles();
     }, []);
 
-    async function getProfiles() {
-        const profilesRes = await Axios.get(`${domain}/search/filter`);
+    function getProfiles() {
+        const profilesRes = Axios.get(`${domain}/search/filter`);
         setProfiles(profilesRes.data);
     };
 

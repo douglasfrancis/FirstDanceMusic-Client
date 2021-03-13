@@ -31,6 +31,15 @@
         color: var(--light-colour);
         margin: 1rem 0;
     }
+
+    .booking-btn{
+        @include btn();
+        background-color: green;
+        color: var(--light-colour);
+        display: block;
+        margin: 1rem auto;
+        width: 30%;
+    }
     
     .name {
         margin: 0.5rem 0;

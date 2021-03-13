@@ -6,6 +6,7 @@ import Home from './components/home/Home';
 import Search from './components/search/Search';
 import FilteredFavourites from './components/search/FilteredFavourites';
 import Navbar from './components/misc/Navbar';
+import BookingForm from './components/search/BookingForm';
 
 export default function Router() {
     return <BrowserRouter>
@@ -25,6 +26,9 @@ export default function Router() {
         </Route>
         <Route path="/favourites">
             <FilteredFavourites />
+        </Route>
+        <Route path="/bookings" component={BookingForm}>
+            <BookingForm />
         </Route>
         
     </Switch>

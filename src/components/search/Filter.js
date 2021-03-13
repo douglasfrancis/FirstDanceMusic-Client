@@ -38,8 +38,9 @@ export default function Filter( {getProfiles}) {
             </select>
 
                 <button>Update Search</button>
-            </form>
                 <button onClick={clearSearch}>Clear</button>
+            </form>
+                
 
             <Link to="/favourites">My Favourites</Link>
            
