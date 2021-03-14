@@ -1,0 +1,25 @@
+@import "../../style/mixins.scss";
+
+.success-msg {
+
+    background: var(--success-colour-light);
+    width: 80%;
+    padding: 0.5rem;
+    display: flex;
+    border: 1px solid var(--success-colour);
+    border-radius: 5px;
+    margin: 1rem auto;
+    justify-content: space-between;
+    align-items: center;
+    p{
+        color: var(--success-colour);
+
+    }
+
+    button{
+        @include btn();
+        background-color: var(--danger-colour);
+        color: var(--light-colour);
+        padding: 0.2rem 0.4rem;
+    }
+}
