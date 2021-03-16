@@ -1,13 +1,15 @@
 @import "../../style/mixins.scss";
 
 .home{
+
+    padding-top: 4rem;
     .add-service-btn{
         @include btn();
         background-color: var(--light-colour);
     }
 
     .no-services{
-        color: var(--light-colour);
+        color: var(--text-dark-colour);
         margin-top: 2rem;
         font-weight: bold;
     }
@@ -15,7 +17,7 @@
     .no-user-msg {
 
        margin-top: 6rem;
-        color: var(--light-colour);
+        color: var(--text-dark-colour);
         text-align: center;
 
         h2{
@@ -24,7 +26,7 @@
 
         a{
             @include btn();
-            color: var(--primary-colour);
+            color: var(--sulking-room);
             margin-top: 2rem;
             font-weight: bold;
             background: var(--light-colour);

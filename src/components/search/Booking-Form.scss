@@ -2,14 +2,15 @@
 
 .booking-form{
     width: 90%;
-    height: 100%;
     position: absolute;
     left: 5%;
+    top: 15vh;
     background-color: var(--light-colour);
     z-index: 999;
     display: block;
     text-align: center;
     padding-top: 1rem;
+    overflow-y: scroll;
 
     form{
         width: 70%;
@@ -29,7 +30,7 @@
         .submit-btn{
             @include btn();
 
-            background-color: var(--primary-colour);
+            background-color: var(--sulking-room);
             color: var(--light-colour);
 
         }

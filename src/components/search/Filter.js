@@ -37,7 +37,7 @@ export default function Filter( {getProfiles}) {
                 <option value="Yorkshire and the Humber">Yorkshire and the Humber</option>    
             </select>
 
-                <button>Update Search</button>
+                <button>Update</button>
                 <button onClick={clearSearch}>Clear</button>
             </form>
                 

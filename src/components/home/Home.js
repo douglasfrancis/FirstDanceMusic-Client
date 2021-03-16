@@ -59,7 +59,7 @@ export default function Home() {
                 ) }
             {user ===null && (
                 <div className="no-user-msg">
-                <h2>Welcome to Service Manager</h2>
+                <h2>Welcome to First Dance Music</h2>
                 <Link to="/register">Register Here</Link>
                 </ div>
             )}

@@ -60,7 +60,7 @@ export default function Search() {
     };
 
     return (
-        <>
+        <div className="bride-view">
         {
                 errorMsg && <ErrorMsg message={errorMsg} clear={() => setErrorMsg(null)}/>
             }
@@ -76,7 +76,7 @@ export default function Search() {
             
         </div>
 
-        </>
+        </div>
         
     )
 }

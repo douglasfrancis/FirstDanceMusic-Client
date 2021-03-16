@@ -4,7 +4,15 @@
     display: flex;
     color: var(--light-colour );
     align-items: center;
-    margin-bottom: 0.5rem;
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: var(--sulking-room) !important;
+    padding: 0.5rem;
+    
 
     a {
         margin-right: 2rem;
@@ -17,7 +25,9 @@
     }
 
     .header-logo{
-        max-height: 10vh;
+        
+        height: 50px;
+        margin: 0.5rem auto;
     }
 
     

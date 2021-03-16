@@ -1,21 +1,37 @@
 @import "../../style/mixins.scss";
 
 .search {
-    margin-top: 4rem;
+    margin-top: 4.5rem;
     text-align: center;
 
+
     .no-services{
-        color: var(--light-colour);
+        color: var(--text-dark-colour);
         text-align: center;
         padding-top: 4rem;
-    }
 }
+
+}
+.bride-view{
+    display: block;
+    padding-top: 3.5rem;
+    overflow-y: scroll;
+
+    @media only screen and (max-width: 640px) {
+        
+        padding-top: 6rem;
+       
+        }
+}
+
+
 .search-profile {
     width: 30% ;
     height: 300px; 
     margin: 1.5rem 1rem;
     display: inline-block;
     padding: 0;
+    border-radius: 0px !important;
     
     
     @include profile();
@@ -27,7 +43,7 @@
     }
     .calculate-btn{
         @include btn();
-        background: var(--primary-colour);
+        background: var(--sulking-room);
         color: var(--light-colour);
         margin: 1rem 0;
     }
@@ -81,7 +97,7 @@
         @include btn();
         display: block;
         margin: 0.5rem auto 0 auto;
-        background-color: var(--primary-colour);
+        background-color: var(--sulking-room);
         color: var(--light-colour);
         
     }
@@ -107,6 +123,17 @@
         width: 200px;
         
         word-wrap: break-word !important;
+
+}
+
+@media only screen and (max-width: 695px) {
+        
+    width: 280px;
+    h2{
+        font-size: 1rem !important;
+    }
+    
+    word-wrap: break-word !important;
 
 }
 }

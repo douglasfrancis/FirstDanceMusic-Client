@@ -1,12 +1,18 @@
 @import "../../style/mixins.scss";
 
 .auth-form {
+
+    position: absolute;
+    top: 15vh;
+    left: 15vw;
+    width: 70vw;
+
     @include profile();
 
     a{
         font-weight: bold;
         font-size: 1.2rem;
-        color: var(--primary-colour);
+        color: var(--sulking-room);
     }
 
     h2{
@@ -17,9 +23,16 @@
     .btn-submit {
         
         @include btn();
-        background: var(--primary-colour);
+        background: var(--sulking-room);
         color: var(--light-colour);
         margin-bottom: 1rem;
     }
+
+    @media only screen and (max-width: 640px) {
+        
+        left: 5vw;
+        width: 90vw;
+       
+        }
 
 }
