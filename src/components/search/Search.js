@@ -21,6 +21,7 @@ export default function Search() {
         getFilteredProfiles();
        } else {
         getProfiles();
+        myFunction();
        }
         
     }, [location, service]);
@@ -59,8 +60,23 @@ export default function Search() {
         })
     };
 
+    var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
     return (
-        <div className="bride-view">
+<>
+        <div id="loader"></div>
+        
+        <div className="bride-view animate-bottom" style={{display: "none"}} id="myDiv" >
+            
         {
                 errorMsg && <ErrorMsg message={errorMsg} clear={() => setErrorMsg(null)}/>
             }
@@ -77,6 +93,8 @@ export default function Search() {
         </div>
 
         </div>
+
+        </>
         
     )
 }
