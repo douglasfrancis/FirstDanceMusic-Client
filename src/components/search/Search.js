@@ -19,6 +19,7 @@ export default function Search() {
     useEffect(() => {
        if(location || service) {
         getFilteredProfiles();
+        myFunction();
        } else {
         getProfiles();
         myFunction();
@@ -74,13 +75,14 @@ function showPage() {
     return (
 <>
         <div id="loader"></div>
-        
-        <div className="bride-view animate-bottom" style={{display: "none"}} id="myDiv" >
-            
         {
                 errorMsg && <ErrorMsg message={errorMsg} clear={() => setErrorMsg(null)}/>
             }
         <Filter getProfiles={getProfiles}/>
+
+        <div className="bride-view animate-bottom" style={{display: "none"}} id="myDiv" >
+            
+        
         
         <div className="search">
             
