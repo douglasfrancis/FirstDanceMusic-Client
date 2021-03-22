@@ -12,6 +12,7 @@ export default function BookingForm( props ) {
     const [brideEmail, setBrideEmail] = useState("");
     const [brideNumber, setBrideNumber] = useState("");
     const [weddingDate, setWeddingDate] = useState("");
+    const [weddingVenue, setWeddingVenue] = useState("");
     const [errorMsg, setErrorMsg] = useState(null);
     const [successMsg, setSuccessMsg] = useState(null);
 
@@ -25,6 +26,7 @@ export default function BookingForm( props ) {
             email: brideEmail,
             number: brideNumber,
             date: weddingDate,
+            venue: weddingVenue,
             artistName: location.state.name,
             service: location.state.service,
             sets: location.state.sets,
@@ -54,6 +56,7 @@ export default function BookingForm( props ) {
         setBrideEmail("");
         setBrideNumber("");
         setWeddingDate("");
+        setWeddingVenue("");
     };
 
     return  (
@@ -78,6 +81,9 @@ export default function BookingForm( props ) {
 
             <label htmlFor="wedding-date">Date of Wedding: </label>
             <input id="wedding-date" type="date" value={weddingDate} onChange={(e)=> setWeddingDate(e.target.value)}/>
+
+            <label htmlFor="wedding-venue">Wedding Venue: </label>
+            <input id="wedding-venue" type="text" value={weddingVenue} onChange={(e)=> setWeddingVenue(e.target.value)}/>
 
             <h3>Musician request details:</h3>
 

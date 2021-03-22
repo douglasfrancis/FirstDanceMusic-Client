@@ -40,6 +40,10 @@ export default function Navbar() {
             </>
             )}
             
+            
+<div class="trustpilot-widget" data-locale="en-GB" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="6057946933c0360001c8c6a0" data-style-height="40px" data-style-width="100%" data-theme="dark">
+  <a href="https://uk.trustpilot.com/review/firstdancemusic.netlify.app" target="_blank" rel="noopener">Trustpilot</a>
+</div>
 
             
             

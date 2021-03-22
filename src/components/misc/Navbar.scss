@@ -13,6 +13,11 @@
     background-color: var(--sulking-room) !important;
     padding: 0.5rem;
     
+    .trustpilot-widget{
+        position: absolute !important;
+        right: 1rem;
+        top: 1rem;
+    }
 
     a {
         margin-right: 2rem;
@@ -29,7 +34,13 @@
         height: 50px;
         margin: 0.5rem auto;
     }
-
+    @media only screen and (max-width: 600px) {
+        
+        .trustpilot-widget{
+            display: none;
+        }
+    
+    }
     
 }
 
