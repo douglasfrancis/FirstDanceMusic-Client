@@ -11,12 +11,13 @@
     top: 0;
     left: 0;
     background-color: var(--sulking-room) !important;
-    padding: 0.5rem;
+    padding: 0.5rem  2rem;
+    
     
     .trustpilot-widget{
         position: absolute !important;
-        right: 1rem;
-        top: 1rem;
+        right: 0;
+        top: 1.5rem;
     }
 
     a {

@@ -5,6 +5,7 @@ import Favourite from './Favourite';
 import "./SearchProfile.scss";
 import { Link } from 'react-router-dom';
 
+
 export default function SearchProfile({profile}) {
 
     const [quoteOpen, setQuoteOpen] = useState(false);
@@ -52,6 +53,7 @@ export default function SearchProfile({profile}) {
             {profile.name && <h2 className="name">{profile.name}</h2>}
 
             <Favourite profile={profile}/>
+            
         
             <button className="btn-quote" onClick={()=> setQuoteOpen(true)} >Instant Quote</button>
             
