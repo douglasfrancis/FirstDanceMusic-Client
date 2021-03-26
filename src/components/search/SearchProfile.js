@@ -53,7 +53,10 @@ export default function SearchProfile({profile}) {
             {profile.name && <h2 className="name">{profile.name}</h2>}
 
             <Favourite profile={profile}/>
-            
+
+           <Link to={{ pathname:`/${profile._id}`, state: {name: profile.name, service: profile.service, } }}>
+           <button>View Profile</button>
+           </Link> 
         
             <button className="btn-quote" onClick={()=> setQuoteOpen(true)} >Instant Quote</button>
             

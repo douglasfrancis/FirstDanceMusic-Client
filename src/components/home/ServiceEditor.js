@@ -90,10 +90,11 @@ export default function ServiceEditor({ getProfiles, setProfileEditorOpen, editS
                 <option >--select--</option>
                 <option value="Aisle Walk">Aisle Walk</option>
                 <option value="Band">Band</option>
-                <option value="DJ">DJ</option>
+                <option value="DJ">DJ (Sax)</option>
                 <option value="Drinks Reception">Drinks Reception</option>
                 <option value="First Dance">First Dance</option>
                 <option value="Instrumental">Instrumental</option>
+                <option value="Wandering">Wandering Musicians</option>
             </select>
 
             <label htmlFor="price">Price per 45 min set/fixed price for Aisle Walk or First Dance</label>

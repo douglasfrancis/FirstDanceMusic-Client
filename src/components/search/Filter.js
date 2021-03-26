@@ -18,10 +18,11 @@ export default function Filter( {getProfiles}) {
                 <option value="" disabled selected hidden>Service</option>
                 <option value="Aisle Walk">Aisle Walk</option>
                 <option value="Band">Band</option>
-                <option value="DJ">DJ</option>
+                <option value="DJ">DJ (Sax)</option>
                 <option value="Drinks Reception">Drinks Reception</option>
                 <option value="First Dance">First Dance</option>
                 <option value="Instrumental">Instrumental</option>
+                <option value="Wandering">Wandering Musicians</option>
             </select> 
             
             <select id="location" name="location" >
