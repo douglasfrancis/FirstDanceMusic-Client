@@ -23,13 +23,11 @@ export default function BigProfile(props) {
 
     return (
         <div id="big-profile">
-           {!profile ? (<p>Something seems to have gone wrong. Please contact us directly so we can ensure you get the best musicians for your big day</p>) : 
+           {!profile ? (<div class="loader"></div>) : 
            < BigProfileView profile= {profile}/>
            
            }
 
-
-            
             
         </div>
     )
