@@ -16,7 +16,7 @@ useEffect(() => {
   }, [liked]);
 
   function openWhatsApp() {  
-    window.open(`whatsapp://send?text= ${profile._id}`);  
+    window.open(`whatsapp://send?text= https://firstdancemusic.netlify.app/${profile._id}`);  
     }  
 
   const toggleLiked = () => {

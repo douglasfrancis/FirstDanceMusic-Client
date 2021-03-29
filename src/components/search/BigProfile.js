@@ -26,10 +26,7 @@ export default function BigProfile(props) {
            {!profile ? (<div class="loader"></div>) : 
            < BigProfileView profile= {profile}/>
            
-           }
-           
-
-            
+           } 
         </div>
     )
 }

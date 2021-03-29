@@ -11,7 +11,7 @@ function openBooking() {
 };
 
     return (
-        <div>
+        <div id="big-prof-view">
             <h1 id="name">{profile.name}</h1>
            
            <iframe className="profile-video"
