@@ -74,7 +74,9 @@
 
 .search-profile {
     width: 25% ;
-    height: 300px; 
+    max-width: 500px;
+    height: 25vw;
+    max-height: 500px; 
     margin: 1.5rem 1rem;
     display: inline-block;
     padding: 0 !important;
@@ -136,7 +138,7 @@
 
         }
         h2{
-            margin: 1rem
+            margin: 0.5rem
         }
     }
 
@@ -168,6 +170,7 @@
             font-size: 0.8rem !important;
         }
         width: 200px;
+        height: 280px;
         
         word-wrap: break-word !important;
 

@@ -64,7 +64,7 @@ export default function Search() {
     var myVar;
 
 function myFunction() {
-  myVar = setTimeout(showPage, 3000);
+  myVar = setTimeout(showPage, 2000);
 }
 
 function showPage() {
@@ -74,7 +74,8 @@ function showPage() {
 
     return (
 <>
-        <div id="loader"></div>
+<div id="loader"></div>
+        
         {
                 errorMsg && <ErrorMsg message={errorMsg} clear={() => setErrorMsg(null)}/>
             }
@@ -89,6 +90,7 @@ function showPage() {
             {profiles.length > 0 ? (
                 renderProfiles()
                 ): (
+                    
                     <p className="no-services">No services for this criteria have been added yet</p>
                 ) }
             

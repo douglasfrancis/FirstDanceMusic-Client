@@ -27,6 +27,7 @@ export default function BigProfile(props) {
            < BigProfileView profile= {profile}/>
            
            }
+           
 
             
         </div>

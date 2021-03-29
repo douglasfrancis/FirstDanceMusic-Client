@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SearchProfile from './SearchProfile';
 import axios from 'axios';
 import domain from '../../util/domain';
+import "./FilteredFavourites.scss";
 
 
 export default function FilteredFavourites() {
@@ -37,11 +38,12 @@ export default function FilteredFavourites() {
 };
 
 function renderProfiles() {
-  return profiles.map((profile, i) => {
-    return  console.log(profile);
-    <SearchProfile key={i} 
+  return users.map((profile, i) => {
+    <h1>{profile}</h1>
+    /*return <SearchProfile key={i} 
     profile={profile} 
-    />
+    getProfiles={getFavourites}
+    />*/
   })
 };
 
@@ -49,6 +51,8 @@ function renderProfiles() {
     <div>
       <div id='maindiv'>
               <h1>Favourites</h1>
+              
+              
 
               {users.length > 0 ? (
                 renderProfiles()
